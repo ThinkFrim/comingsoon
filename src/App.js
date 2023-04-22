@@ -1,7 +1,10 @@
-
+import '../src/styles/global.css'
+import Home from './pages/home'
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Home />
+    </div>
   )
 }
 

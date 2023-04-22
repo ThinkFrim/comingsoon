@@ -1,8 +1,10 @@
-import React from 'react'
-
 const Nav = () => {
   return (
-    <div>Nav</div>
+    <div className="py-10 px-10">
+      <nav>
+        <img src="/Logo/ThinkFrimLogo.svg" alt="" />
+      </nav>
+    </div>
   )
 }
 
