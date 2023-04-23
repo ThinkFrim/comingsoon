@@ -9,7 +9,7 @@ const Home = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(process.env.EMAIL_JS_SERVICE, process.env.EMAIL_JS_TEMPLATE, form.current, process.env.PUBLIC_KEY)
+    emailjs.sendForm('service_9krehvb', 'template_n4kts1h', form.current, '9kaC9PmbSn7PX5bOs')
 
       .then((result) => {
         console.log(result.text);
@@ -31,20 +31,20 @@ const Home = () => {
         <form ref={form} onSubmit={sendEmail} className="grid grid-cols-2 gap-4 m-auto xl:m-0 max-w-xl lg:w-8/12">
 
           <div className="col-span-2 lg:col-span-2">
-            <input type="text" name="FullName" className="border-solid chineseBlackBg text-white border-2 p-3 md:text-xl w-full" placeholder="FullName" />
+            <input type="text" required name="FullName" className="border-solid chineseBlackBg text-white border-2 p-3 md:text-xl w-full" placeholder="FullName" />
           </div>
 
           <div className="col-span-2 lg:col-span-2">
-            <input type="text" name="Email" className="border-solid chineseBlackBg  text-white border-2 p-3 md:text-xl w-full" placeholder="example@gmail.com" />
+            <input type="text" required name="email" className="border-solid chineseBlackBg  text-white border-2 p-3 md:text-xl w-full" placeholder="example@gmail.com" />
           </div>
 
           <div className="col-span-2 lg:col-span-2">
-            <input type="number" name="number" className="border-solid chineseBlackBg text-white border-2 p-3 md:text-xl w-full" placeholder="PhoneNumber (+961)" />
+            <input type="tel" required name="PhoneNumber" className="border-solid chineseBlackBg text-white border-2 p-3 md:text-xl w-full" placeholder="PhoneNumber (+961)" />
           </div>
 
           <div className="col-span-2">
             <h1 className='text-white lg:text-2xl pb-5'>Message</h1>
-            <textarea cols="30" rows="8" name="message" className="border-solid chineseBlackBg text-white border-2 p-3 md:text-xl w-full" placeholder="Message"></textarea>
+            <textarea cols="30" rows="8" required name="Message" className="border-solid chineseBlackBg text-white border-2 p-3 md:text-xl w-full" placeholder="Message"></textarea>
           </div>
 
           <div class="col-span-2 text-right">
