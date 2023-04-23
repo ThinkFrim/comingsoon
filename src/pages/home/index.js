@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from '../../components/nav';
+import './home.css'
 
 const Home = () => {
   return (
@@ -21,9 +22,16 @@ const Home = () => {
           <input type="tel" placeholder='Phone Number' className='chineseBlackBg text-white border-[1px] border-white my-4 p-3 xl:mb-10 xl:w-[140%]' />
           <h1 className='text-white xl:text-2xl xl:pb-2'>Message</h1>
           <textarea placeholder='Message' row={4} cols={35} className='chineseBlackBg text-white border-[1px] border-white my-4 p-3' />
-          <button className=' flex items-center gap-5 rounded-[15px] text-white DriftWood p-2'>
-          Submit
-            <img src="/icons/arrow.svg" alt="" />
+          <button>
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+                </svg>
+              </div>
+            </div>
+            <span>Send</span>
           </button>
         </form>
       </div>
