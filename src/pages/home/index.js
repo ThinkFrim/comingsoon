@@ -2,6 +2,10 @@ import React, { useRef } from 'react';
 import Nav from '../../components/nav';
 import './home.css'
 import emailjs from 'emailjs-com';
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Home = () => {
   const form = useRef();
@@ -12,14 +16,16 @@ const Home = () => {
     emailjs.sendForm('service_9krehvb', 'template_n4kts1h', form.current, '9kaC9PmbSn7PX5bOs')
 
       .then((result) => {
-        console.log(result.text);
+        toast.success('Message sent successfully!');
         form.current.reset(); // Reset the form after submission
       }, (error) => {
-        console.log(error.text);
+        toast.error('An error occurred while sending the message.');
+        console.log(error);
       });
   };
   return (
     <div className='chineseBlackBg min-h-screen lg:h-screen'>
+      <ToastContainer />
       <Nav />
       <div className='lg:flex lg:items-center lg:justify-around lg:gap-[5rem]'>
         <div className='text-center pb-5 lg:text-left lg:px-5'>
