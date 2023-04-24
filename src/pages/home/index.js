@@ -13,19 +13,20 @@ const Home = () => {
 
       .then((result) => {
         console.log(result.text);
+        form.current.reset(); // Reset the form after submission
       }, (error) => {
         console.log(error.text);
       });
   };
   return (
-    <div className='chineseBlackBg h-screen lg:h-screen'>
+    <div className='chineseBlackBg min-h-screen lg:h-screen'>
       <Nav />
       <div className='lg:flex lg:items-center lg:justify-around lg:gap-[5rem]'>
         <div className='text-center pb-5 lg:text-left lg:px-5'>
-          <h1 className='text-white text-4xl pb-5 lg:text-5xl'>Coming Soon !</h1>
+          <h1 className='text-white text-4xl pb-2 xl:text-6xl'>Coming Soon !</h1>
           <h2 className='text-white text-2xl font-light lg:text-3xl flex items-center justify-center lg:justify-start gap-3'>
             Get In Touch
-            <img src="/icons/mail.svg" className='w-[5%] md:w-[4%] xl:w-8' alt="" />
+            <img src="/icons/mail.svg" className='w-[5%] md:w-[4%] lg:w-[10%] xl:w-8' alt="" />
           </h2>
         </div>
         <form ref={form} onSubmit={sendEmail} className="grid grid-cols-2 gap-4 m-auto xl:m-0 max-w-xl lg:w-8/12">
@@ -43,7 +44,7 @@ const Home = () => {
           </div>
 
           <div className="col-span-2">
-            <h1 className='text-white lg:text-2xl pb-5'>Message</h1>
+            <h1 className='text-white lg:text-2xl pb-1'>Message</h1>
             <textarea cols="30" rows="8" required name="Message" className="border-solid chineseBlackBg text-white border-2 p-3 md:text-xl w-full" placeholder="Message"></textarea>
           </div>
 
