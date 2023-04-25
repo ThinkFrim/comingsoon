@@ -37,11 +37,11 @@ const Home = () => {
         </div>
         <form ref={form} onSubmit={sendEmail} className="grid grid-cols-2 gap-4 m-auto xl:m-0 max-w-xl lg:w-8/12">
 
-          <div className="col-span-2 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <input type="text" required name="FullName" className="border-solid chineseBlackBg text-white border-2 p-3 md:text-xl w-full" placeholder="FullName" />
           </div>
 
-          <div className="col-span-2 lg:col-span-2">
+          <div className="col-span-1 lg:col-span-2">
             <input type="text" required name="email" className="border-solid chineseBlackBg  text-white border-2 p-3 md:text-xl w-full" placeholder="example@gmail.com" />
           </div>
 
